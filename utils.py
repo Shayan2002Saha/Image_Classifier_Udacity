@@ -137,9 +137,9 @@ def load_checkpoint(path):
     checkpoint = torch.load(path, map_location='cpu')
     
     # Dictionary defining the models
-    archs = {'vgg13': models.vgg13(pretrained=True), 
-             'densenet121': models.densenet121(pretrained=True),
-             'resnet18': models.resnet18(pretrained=True)}
+    archs = {'vgg13': models.vgg13(weights='DEFAULT'), 
+             'densenet121': models.densenet121(weights='DEFAULT'),
+             'resnet18': models.resnet18(weights='DEFAULT')}
     
     model = archs[checkpoint['model']]
     

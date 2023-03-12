@@ -12,9 +12,9 @@ def create_model(arch, hidden_units, output_units):
     Returns: Newly created model
     """
     # Dictionary defining the models
-    archs = {'vgg13': models.vgg13(pretrained=True), 
-             'densenet121': models.densenet121(pretrained=True),
-             'resnet18': models.resnet18(pretrained=True)}
+    archs = {'vgg13': models.vgg13(weights='DEFAULT'), 
+             'densenet121': models.densenet121(weights='DEFAULT'),
+             'resnet18': models.resnet18(weights='DEFAULT')}
     
     # Loading the model
     model = archs[arch]
